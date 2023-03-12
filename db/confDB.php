@@ -5,8 +5,8 @@ if(!isset($_ENV['JAWSDB_URL'])){
      */
     $HOST = 'localhost';
     $DB = 'restaurant';
-    $USER = 'root';
-    $PWD = '';
+    $USER = 'mathias';
+    $PWD = 'E.300619';
 } else {
     /**
      * Conf to run via heroku

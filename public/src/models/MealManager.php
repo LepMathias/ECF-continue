@@ -20,7 +20,6 @@ class MealManager
     }
     public function getMeals($i)
     {
-        require_once 'Meal.php';
         $statement = $this->pdo->prepare("SELECT * FROM meals WHERE categoryId=$i");
         $statement->setFetchMode(PDO::FETCH_CLASS, 'Meal');
         $statement->execute();

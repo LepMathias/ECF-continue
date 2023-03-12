@@ -34,8 +34,7 @@ try {
     $mainCourses = $mealManager->getMeals(2);
     $desserts = $mealManager->getMeals(3);
 
-    $menuManager = new MenuManager($pdo);
-    $menus = $menuManager->getMenus();
+
 
     /**
      * Update / Read Schedules on footer

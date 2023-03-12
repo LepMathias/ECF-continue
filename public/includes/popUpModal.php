@@ -62,25 +62,25 @@
                             </select>
                         </div>
                     </div>
-                    <?php if (!isset($_SESSION['id'])): ?>
+                    <?php if (!isset($user)): ?>
                     <label for="lastname" class="form-label">Nom</label>
-                    <input type="text" name="lastname" id="lastname" value="<?=$_SESSION['lastname']?>" class="form-control" required>
+                    <input type="text" name="lastname" id="lastname" value="<?=$user->lastname?>" class="form-control" required>
 
                     <label for="firstname" class="form-label">Prénom</label>
-                    <input type="text" name="firstname" id="firstname" value="<?=$_SESSION['firstname']?>" class="form-control" required>
+                    <input type="text" name="firstname" id="firstname" value="<?=$user->firstname?>" class="form-control" required>
                     <?php endif;?>
 
                     <label for="nbrOfGuest" class="form-label">Nombre de personne</label>
-                    <input type="number" name="nbrOfGuest" id="nbrOfGuest" value="<?=$_SESSION['defaultNbrGuest']?>" class="form-control" required>
+                    <input type="number" name="nbrOfGuest" id="nbrOfGuest" value="<?=$user->defaultNbrGuest?>" class="form-control" required>
 
                     <label for="emailAddress" class="form-label">Adresse e-mail</label>
-                    <input type="email" name="emailAddress" id="emailAddress" value="<?=$_SESSION['email']?>" class="form-control" required>
+                    <input type="email" name="emailAddress" id="emailAddress" value="<?=$user->email?>" class="form-control" required>
 
                     <label for="phoneNumber" class="form-label">Numéro de téléphone</label>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" value="<?=$_SESSION['phoneNumber']?>" class="form-control" required pattern="^((\+)33|0)[1-9](\d{2}){4}$">
+                    <input type="tel" name="phoneNumber" id="phoneNumber" value="<?=$user->phoneNumber?>" class="form-control" required pattern="^((\+)33|0)[1-9](\d{2}){4}$">
 
                     <label for="allergies" class="form-label">Allergies</label>
-                    <textarea type="text" name="allergies" id="allergies" value="<?=$_SESSION['allergies']?>" class="form-control" rows="5"></textarea>
+                    <textarea type="text" name="allergies" id="allergies" value="<?=$user->allergies?>" class="form-control" rows="5"></textarea>
 
                     <input name="reservation_form" value="newReservation" type="hidden"/>
                     <button type="submit" class="btn btn-menu">Réserver</button>
